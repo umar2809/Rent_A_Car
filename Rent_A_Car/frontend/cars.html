@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="cars.html">Cars</a>
+    <a href="customers.html">Customers</a>
+    <a href="bookings.html">Bookings</a>
+  </nav>
+  <main>
+    <h1>Cars</h1>
+    <form id="car-form">
+      <input type="hidden" id="car-id">
+      <input type="text" id="car-make" placeholder="Make" required>
+      <input type="text" id="car-model" placeholder="Model" required>
+      <input type="number" id="car-year" placeholder="Year" required>
+      <input type="text" id="car-license" placeholder="License Plate" required>
+      <input type="number" id="car-rate" placeholder="Daily Rate" required step="0.01">
+      <button type="submit">Save</button>
+      <button type="button" id="car-cancel" style="display:none;">Cancel</button>
+    </form>
+    <div id="car-error" style="color:red;"></div>
+    <table id="cars-table">
+      <thead>
+        <tr><th>ID</th><th>Make</th><th>Model</th><th>Year</th><th>License</th><th>Rate</th><th>Available</th><th>Actions</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <script src="api.js"></script>
+  <script>
+    async function loadCars() {
+      const cars = await api.getCars();
+      const tbody = document.querySelector('#cars-table tbody');
+      tbody.innerHTML = '';
+      cars.forEach(car => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${car.id}</td><td>${car.make}</td><td>${car.model}</td><td>${car.year}</td><td>${car.licensePlate}</td><td>${car.dailyRate}</td><td>${car.isAvailable ? 'Yes' : 'No'}</td><td><button onclick="editCar(${car.id})">Edit</button> <button onclick="deleteCar(${car.id})">Delete</button></td>`;
+        tbody.appendChild(tr);
+      });
+    }
+    async function editCar(id) {
+      const car = await api.getCar(id);
+      document.getElementById('car-id').value = car.id;
+      document.getElementById('car-make').value = car.make;
+      document.getElementById('car-model').value = car.model;
+      document.getElementById('car-year').value = car.year;
+      document.getElementById('car-license').value = car.licensePlate;
+      document.getElementById('car-rate').value = car.dailyRate;
+      document.getElementById('car-cancel').style.display = 'inline';
+    }
+    async function deleteCar(id) {
+      if (confirm('Delete this car?')) {
+        await api.deleteCar(id);
+        loadCars();
+      }
+    }
+    document.getElementById('car-form').onsubmit = async function(e) {
+      e.preventDefault();
+      document.getElementById('car-error').textContent = '';
+      const id = document.getElementById('car-id').value;
+      const car = {
+        make: document.getElementById('car-make').value,
+        model: document.getElementById('car-model').value,
+        year: +document.getElementById('car-year').value,
+        licensePlate: document.getElementById('car-license').value,
+        dailyRate: +document.getElementById('car-rate').value,
+        isAvailable: true
+      };
+      try {
+        let result;
+        if (id) {
+          result = await api.updateCar(id, car);
+        } else {
+          result = await api.createCar(car);
+        }
+        if (result && (result.id || result.ok)) {
+          this.reset();
+          document.getElementById('car-cancel').style.display = 'none';
+          loadCars();
+          // Notify bookings page to reload if open
+          if (window.localStorage) {
+            localStorage.setItem('reloadBookings', Date.now());
+          }
+        } else if (result && result.title && result.status) {
+          document.getElementById('car-error').textContent = result.title;
+        } else {
+          document.getElementById('car-error').textContent = 'Unknown error.';
+        }
+      } catch (err) {
+        document.getElementById('car-error').textContent = 'Failed to save car.';
+      }
+    };
+    document.getElementById('car-cancel').onclick = function() {
+      document.getElementById('car-form').reset();
+      this.style.display = 'none';
+    };
+    loadCars();
+  </script>
+</body>
+</html>

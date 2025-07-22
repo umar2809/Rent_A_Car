@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="cars.html">Cars</a>
+    <a href="customers.html">Customers</a>
+    <a href="bookings.html">Bookings</a>
+  </nav>
+  <main>
+    <h1>Bookings</h1>
+    <form id="booking-form">
+      <input type="hidden" id="booking-id">
+      <select id="booking-carid" required><option value="">Select Car</option></select>
+      <select id="booking-customerid" required><option value="">Select Customer</option></select>
+      <input type="date" id="booking-start" required>
+      <input type="date" id="booking-end" required>
+      <button type="submit">Save</button>
+      <button type="button" id="booking-cancel" style="display:none;">Cancel</button>
+    </form>
+    <table id="bookings-table">
+      <thead>
+        <tr><th>ID</th><th>Car</th><th>Customer</th><th>ID Card Number</th><th>Start</th><th>End</th><th>Cost</th><th>Completed</th><th>Actions</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <script src="api.js"></script>
+  <script>
+    let cars = [];
+    let customers = [];
+    async function loadCarsDropdown() {
+      cars = await api.getCars();
+      const select = document.getElementById('booking-carid');
+      select.innerHTML = '<option value="">Select Car</option>';
+      cars.forEach(c => {
+        const option = document.createElement('option');
+        option.value = c.id;
+        option.textContent = `${c.make} ${c.model}`;
+        select.appendChild(option);
+      });
+    }
+    async function loadCustomersDropdown() {
+      customers = await api.getCustomers();
+      const select = document.getElementById('booking-customerid');
+      select.innerHTML = '<option value="">Select Customer</option>';
+      customers.forEach(c => {
+        const option = document.createElement('option');
+        option.value = c.id;
+        option.textContent = `${c.firstName} ${c.lastName}`;
+        select.appendChild(option);
+      });
+    }
+    async function loadBookings() {
+      cars = await api.getCars();
+      customers = await api.getCustomers();
+      const bookings = await api.getBookings();
+      const tbody = document.querySelector('#bookings-table tbody');
+      tbody.innerHTML = '';
+      bookings.forEach(booking => {
+        const car = booking.car || cars.find(c => c.id === booking.carId);
+        const customer = booking.customer || customers.find(c => c.id === booking.customerId);
+        const carName = car ? `${car.make} ${car.model}` : booking.carId;
+        const customerName = customer ? `${customer.firstName} ${customer.lastName}` : booking.customerId;
+        const idCardNumber = customer ? customer.idCardNumber || '' : '';
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${booking.id}</td><td>${carName}</td><td>${customerName}</td><td>${idCardNumber}</td><td>${booking.startDate.split('T')[0]}</td><td>${booking.endDate.split('T')[0]}</td><td>${booking.totalCost}</td><td>${booking.isCompleted ? 'Yes' : 'No'}</td><td>${!booking.isCompleted ? `<button onclick=\"completeBooking(${booking.id})\">Complete</button>` : ''}</td>`;
+        tbody.appendChild(tr);
+      });
+    }
+    async function completeBooking(id) {
+      await api.completeBooking(id);
+      loadBookings();
+    }
+    document.getElementById('booking-form').onsubmit = async function(e) {
+      e.preventDefault();
+      const booking = {
+        carId: +document.getElementById('booking-carid').value,
+        customerId: +document.getElementById('booking-customerid').value,
+        startDate: document.getElementById('booking-start').value,
+        endDate: document.getElementById('booking-end').value
+      };
+      await api.createBooking(booking);
+      this.reset();
+      document.getElementById('booking-cancel').style.display = 'none';
+      loadBookings();
+    };
+    document.getElementById('booking-cancel').onclick = function() {
+      document.getElementById('booking-form').reset();
+      this.style.display = 'none';
+    };
+    loadCarsDropdown();
+    loadCustomersDropdown();
+    loadBookings();
+    // Listen for car edits from other tabs/windows
+    if (window.localStorage) {
+      window.addEventListener('storage', function(e) {
+        if (e.key === 'reloadBookings') {
+          loadBookings();
+        }
+      });
+    }
+  </script>
+</body>
+</html>

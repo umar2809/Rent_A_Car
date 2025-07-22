@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="cars.html">Cars</a>
+    <a href="customers.html">Customers</a>
+    <a href="bookings.html">Bookings</a>
+  </nav>
+  <main>
+    <h1>Customers</h1>
+    <form id="customer-form">
+      <input type="hidden" id="customer-id">
+      <input type="text" id="customer-first" placeholder="First Name" required>
+      <input type="text" id="customer-last" placeholder="Last Name" required>
+      <input type="email" id="customer-email" placeholder="Email" required>
+      <input type="text" id="customer-phone" placeholder="Phone" required>
+      <input type="text" id="customer-idcard" placeholder="ID Card Number" required>
+      <button type="submit">Save</button>
+      <button type="button" id="customer-cancel" style="display:none;">Cancel</button>
+    </form>
+    <div id="customer-error" style="color:red;"></div>
+    <table id="customers-table">
+      <thead>
+        <tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Phone</th><th>ID Card Number</th><th>Actions</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <script src="api.js"></script>
+  <script>
+    async function loadCustomers() {
+      const customers = await api.getCustomers();
+      const tbody = document.querySelector('#customers-table tbody');
+      tbody.innerHTML = '';
+      customers.forEach(customer => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${customer.id}</td><td>${customer.firstName}</td><td>${customer.lastName}</td><td>${customer.email}</td><td>${customer.phone}</td><td>${customer.idCardNumber || ''}</td><td><button onclick="editCustomer(${customer.id})">Edit</button> <button onclick="deleteCustomer(${customer.id})">Delete</button></td>`;
+        tbody.appendChild(tr);
+      });
+    }
+    async function editCustomer(id) {
+      const customer = await api.getCustomer(id);
+      document.getElementById('customer-id').value = customer.id;
+      document.getElementById('customer-first').value = customer.firstName;
+      document.getElementById('customer-last').value = customer.lastName;
+      document.getElementById('customer-email').value = customer.email;
+      document.getElementById('customer-phone').value = customer.phone;
+      document.getElementById('customer-idcard').value = customer.idCardNumber || '';
+      document.getElementById('customer-cancel').style.display = 'inline';
+    }
+    async function deleteCustomer(id) {
+      if (confirm('Delete this customer?')) {
+        await api.deleteCustomer(id);
+        loadCustomers();
+      }
+    }
+    document.getElementById('customer-form').onsubmit = async function(e) {
+      e.preventDefault();
+      document.getElementById('customer-error').textContent = '';
+      const id = document.getElementById('customer-id').value;
+      const customer = {
+        firstName: document.getElementById('customer-first').value,
+        lastName: document.getElementById('customer-last').value,
+        email: document.getElementById('customer-email').value,
+        phone: document.getElementById('customer-phone').value,
+        idCardNumber: document.getElementById('customer-idcard').value
+      };
+      try {
+        let result;
+        if (id) {
+          result = await api.updateCustomer(id, customer);
+        } else {
+          result = await api.createCustomer(customer);
+        }
+        if (result && (result.id || result.ok)) {
+          this.reset();
+          document.getElementById('customer-cancel').style.display = 'none';
+          loadCustomers();
+          // Notify bookings page to reload if open
+          if (window.localStorage) {
+            localStorage.setItem('reloadBookings', Date.now());
+          }
+        } else if (result && result.title && result.status) {
+          document.getElementById('customer-error').textContent = result.title;
+        } else {
+          document.getElementById('customer-error').textContent = 'Unknown error.';
+        }
+      } catch (err) {
+        document.getElementById('customer-error').textContent = 'Failed to save customer.';
+      }
+    };
+    document.getElementById('customer-cancel').onclick = function() {
+      document.getElementById('customer-form').reset();
+      this.style.display = 'none';
+    };
+    loadCustomers();
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="cars.html">Cars</a>
+    <a href="customers.html">Customers</a>
+    <a href="bookings.html">Bookings</a>
+  </nav>
+  <main>
+    <h1>Dashboard</h1>
+    <div id="dashboard">
+      <div class="card"><h2>Total Cars</h2><span id="total-cars">0</span></div>
+      <div class="card"><h2>Available Cars</h2><span id="available-cars">0</span></div>
+      <div class="card"><h2>Total Customers</h2><span id="total-customers">0</span></div>
+      <div class="card"><h2>Active Bookings</h2><span id="active-bookings">0</span></div>
+      <div class="card"><h2>Total Revenue</h2><span id="total-revenue">0</span></div>
+    </div>
+  </main>
+  <script src="api.js"></script>
+  <script>
+    async function loadDashboard() {
+      const cars = await api.getCars();
+      const customers = await api.getCustomers();
+      const bookings = await api.getBookings();
+      document.getElementById('total-cars').textContent = cars.length;
+      document.getElementById('available-cars').textContent = cars.filter(c => c.isAvailable).length;
+      document.getElementById('total-customers').textContent = customers.length;
+      document.getElementById('active-bookings').textContent = bookings.filter(b => !b.isCompleted).length;
+      document.getElementById('total-revenue').textContent = bookings.reduce((sum, b) => sum + b.totalCost, 0).toFixed(2);
+    }
+    loadDashboard();
+  </script>
+</body>
+</html>
