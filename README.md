@@ -1,7 +1,7 @@
 # Rent_A_Car
 
 A full-stack Car Rental Management System designed for rental agencies to efficiently handle car inventory, customer data, and booking operations.
-## This line added for reset
+
 
 ## Features
 
