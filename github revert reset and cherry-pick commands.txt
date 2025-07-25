@@ -1,0 +1,45 @@
+Git stach
+How to add README.md file
+1:git add README.md
+2:git commit -m "Add README file"
+3:git push
+
+---------------------------
+How to revert Reset and cherrypick commits?
+Revert:-
+1:$git log -- pretty=oneline
+2:$ git revert e6786c7cc6668ccc57cvvvtc6c5c5c
+3:wq
+4:git log pretty=oneline
+5:git push
+----------------
+Git Reset:-
+1:git status
+2:git add
+3:git commit -m "temp commit for undo or reset"
+4:git status
+5:git log
+6:git log --pretty=oneline
+7:q //for quit
+8:git reset --soft 43nn3b4jn567mn7jb45kl
+9:git status
+10:git pull origin main
+11:git push origin main
+--------------------
+$git cherry-pick fe34fdfdjg
+---------------------------------------
+git ignore file
+we hide our secrect file in this 
+$git rm --cached style.css // when we change something in hiden file
+$ git rm --cached -r bin/ // when over we commit this by falut then we think that we add this in gitignore file
+
+----------------------------------
+when our we remove commits from staging area
+$ git restore -- staged .
+$ git commit -am "remove anything" // is this process we do two things add or commit 
+
+$git checkout 17ddf36f script.js // when our we delete our file by mistake and add commit this command for restore our file again
+
+-----------------
+$ git branch // through this we know that how many branches we have
+$ git swith contact // switch the brach by using branch name

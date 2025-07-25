@@ -2,7 +2,7 @@
 
 A full-stack Car Rental Management System designed for rental agencies to efficiently handle car inventory, customer data, and booking operations.
 
-
+# semester project
 ## Features
 
 - **Car Management**: Add, edit, view, and delete cars, including details like make, model, year, license plate, and daily rate.
