@@ -2,8 +2,9 @@
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<AppDbContext>(opt => 
-    opt.UseInMemoryDatabase("RentalDb"));
+var connectionString = builder.Configuration.GetConnectionString("RentalDb");
+builder.Services.AddDbContext<AppDbContext>(opt =>
+    opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddEndpointsApiExplorer();
@@ -198,7 +199,7 @@ app.MapPut("/bookings/{id}", async (int id, Booking updatedBooking, AppDbContext
     var carForRate = await db.Cars.FindAsync(booking.CarId);
     var bookingDays = (int)(booking.EndDate - booking.StartDate).TotalDays;
     if (bookingDays < 1) return Results.BadRequest("Invalid booking duration");
-    booking.TotalCost = carForRate.DailyRate * bookingDays;
+    booking.TotalCost = carForRate?.DailyRate * bookingDays ?? 0;
 
     await db.SaveChangesAsync();
     return Results.Ok(booking);
