@@ -1,0 +1,1193 @@
+﻿i-05a83f0d24ab6ac98	[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[0m[35m[40m[2J[01;01H[=3h[2J[01;01H[0m[37m[40m  Booting `Amazon Linux (6.18.38-73.137.amzn2023.x86_64) 2023'
+
+
+
+[    3.326995] systemd[1]: Started systemd-journald.service - Journal Service.
+
+[    3.364896] systemd-journald[1103]: Received client request to flush runtime journal.
+
+[    3.685826] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+
+[    3.689039] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+
+[    3.690256] i8042: Warning: Keylock active
+
+[    3.693324] serio: i8042 KBD port at 0x60,0x64 irq 1
+
+[    3.693872] serio: i8042 AUX port at 0x60,0x64 irq 12
+
+[    3.694918] ena 0000:00:05.0: Elastic Network Adapter (ENA) v2.17.2g
+
+[    3.702748] ena 0000:00:05.0: ENA device version: 0.10
+
+[    3.703354] ena 0000:00:05.0: ENA controller version: 0.0.1 implementation version 1
+
+[    3.723020] ACPI: button: Power Button [PWRF]
+
+[    3.728092] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+
+[    3.729736] ACPI: button: Sleep Button [SLPF]
+
+[    3.782765] ena 0000:00:05.0: LLQ is not supported Fallback to host mode policy.
+
+[    3.795661] ena 0000:00:05.0: Elastic Network Adapter (ENA) found at mem 80400000, mac addr 02:28:9e:e7:d2:5f
+
+[    3.820383] ena 0000:00:05.0 ens5: renamed from eth0
+
+[    3.851763] nvme nvme0: using unchecked data buffer
+
+[    3.979504] zram_generator::config[1662]: zram0: system has too much memory (912MB), limit is 800MB, ignoring.
+
+[    5.150052] cloud-init[1802]: Cloud-init v. 22.2.2 running 'init' at Thu, 23 Jul 2026 10:30:38 +0000. Up 5.12 seconds.
+
+[    5.224922] cloud-init[1802]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++
+
+[    5.226917] cloud-init[1802]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+
+[    5.228832] cloud-init[1802]: ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
+
+[    5.230725] cloud-init[1802]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+
+[    5.232608] cloud-init[1802]: ci-info: |  ens5  | True |         10.0.2.182         | 255.255.255.0 | global | 02:28:9e:e7:d2:5f |
+
+[    5.234836] cloud-init[1802]: ci-info: |  ens5  | True | fe80::28:9eff:fee7:d25f/64 |       .       |  link  | 02:28:9e:e7:d2:5f |
+
+[    5.236742] cloud-init[1802]: ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
+
+[    5.238612] cloud-init[1802]: ci-info: |   lo   | True |          ::1/128           |       .       |  host  |         .         |
+
+[    5.240476] cloud-init[1802]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+
+[    5.242393] cloud-init[1802]: ci-info: ++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++
+
+[    5.244018] cloud-init[1802]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+
+[    5.245738] cloud-init[1802]: ci-info: | Route | Destination | Gateway  |     Genmask     | Interface | Flags |
+
+[    5.247371] cloud-init[1802]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+
+[    5.249011] cloud-init[1802]: ci-info: |   0   |   0.0.0.0   | 10.0.2.1 |     0.0.0.0     |    ens5   |   UG  |
+
+[    5.250634] cloud-init[1802]: ci-info: |   1   |   10.0.0.2  | 10.0.2.1 | 255.255.255.255 |    ens5   |  UGH  |
+
+[    5.252228] cloud-init[1802]: ci-info: |   2   |   10.0.2.0  | 0.0.0.0  |  255.255.255.0  |    ens5   |   U   |
+
+[    5.253871] cloud-init[1802]: ci-info: |   3   |   10.0.2.1  | 0.0.0.0  | 255.255.255.255 |    ens5   |   UH  |
+
+[    5.255479] cloud-init[1802]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+
+[    5.257283] cloud-init[1802]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+
+[    5.258719] cloud-init[1802]: ci-info: +-------+-------------+---------+-----------+-------+
+
+[    5.260213] cloud-init[1802]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+
+[    5.261661] cloud-init[1802]: ci-info: +-------+-------------+---------+-----------+-------+
+
+[    5.263095] cloud-init[1802]: ci-info: |   0   |  fe80::/64  |    ::   |    ens5   |   U   |
+
+[    5.264524] cloud-init[1802]: ci-info: |   2   |    local    |    ::   |    ens5   |   U   |
+
+[    5.266030] cloud-init[1802]: ci-info: |   3   |  multicast  |    ::   |    ens5   |   U   |
+
+[    5.267452] cloud-init[1802]: ci-info: +-------+-------------+---------+-----------+-------+
+
+[    6.088966] cloud-init[1802]: Generating public/private ed25519 key pair.
+
+[    6.090409] cloud-init[1802]: Your identification has been saved in /etc/ssh/ssh_host_ed25519_key
+
+[    6.092038] cloud-init[1802]: Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub
+
+[    6.093693] cloud-init[1802]: The key fingerprint is:
+
+[    6.094633] cloud-init[1802]: SHA256:HwHbMGGjS0KGnGSB3COsgfnZ+p1bhPlqwh0QJjImEcU root@ip-10-0-2-182.ap-south-1.compute.internal
+
+[    6.096565] cloud-init[1802]: The key's randomart image is:
+
+[    6.097568] cloud-init[1802]: +--[ED25519 256]--+
+
+[    6.098436] cloud-init[1802]: |*X*+o   B.       |
+
+[    6.099290] cloud-init[1802]: |O*E=o  o B       |
+
+[    6.100160] cloud-init[1802]: |+=.=o.o . o      |
+
+[    6.101032] cloud-init[1802]: |. o oo +   .     |
+
+[    6.101886] cloud-init[1802]: |   . .+ S .      |
+
+[    6.102717] cloud-init[1802]: |  .   .o . .     |
+
+[    6.103562] cloud-init[1802]: |   o o oo .      |
+
+[    6.104417] cloud-init[1802]: |    + =o         |
+
+[    6.105300] cloud-init[1802]: |     oo.         |
+
+[    6.106176] cloud-init[1802]: +----[SHA256]-----+
+
+[    6.107028] cloud-init[1802]: Generating public/private ecdsa key pair.
+
+[    6.108160] cloud-init[1802]: Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key
+
+[    6.109666] cloud-init[1802]: Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub
+
+[    6.111214] cloud-init[1802]: The key fingerprint is:
+
+[    6.112147] cloud-init[1802]: SHA256:lDuE38/WJv6hSXZONbmWqkAxnMgD5oJBmMxDiTpcswQ root@ip-10-0-2-182.ap-south-1.compute.internal
+
+[    6.114106] cloud-init[1802]: The key's randomart image is:
+
+[    6.115094] cloud-init[1802]: +---[ECDSA 256]---+
+
+[    6.115980] cloud-init[1802]: |BEo  o           |
+
+[    6.116892] cloud-init[1802]: |+=o+o o.o..      |
+
+[    6.117755] cloud-init[1802]: |o.+.o..++=       |
+
+[    6.118614] cloud-init[1802]: |o. ..  +.oo     .|
+
+[    6.119479] cloud-init[1802]: | .      S..    o.|
+
+[    6.120390] cloud-init[1802]: |        .. o . .+|
+
+[    6.121289] cloud-init[1802]: |         .  B *+ |
+
+[    6.122199] cloud-init[1802]: |          .= Oo. |
+
+[    6.123056] cloud-init[1802]: |           .=oo  |
+
+[    6.123915] cloud-init[1802]: +----[SHA256]-----+
+
+[    6.531353] cloud-init[1882]: Cloud-init v. 22.2.2 running 'modules:config' at Thu, 23 Jul 2026 10:30:39 +0000. Up 6.48 seconds.
+
+[    6.940138] cloud-init[1887]: Cloud-init v. 22.2.2 running 'modules:final' at Thu, 23 Jul 2026 10:30:40 +0000. Up 6.89 seconds.
+
+
+
+
+Amazon Linux 2023.12.20260720
+
+Kernel 6.18.38-73.137.amzn2023.x86_64 on an x86_64 (-)
+
+
+
+ip-10-0-2-182 login: [   98.873618] cloud-init[1887]: Amazon Linux 2023 repository                    804 kB/s |  73 MB     01:32
+
+[  114.926261] cloud-init[1887]: Amazon Linux 2023 Kernel Livepatch repository   534 kB/s |  61 kB     00:00
+
+[  115.050244] cloud-init[1887]: Last metadata expiration check: 0:00:01 ago on Thu Jul 23 10:32:29 2026.
+
+[  116.905185] cloud-init[1887]: Dependencies resolved.
+
+[  116.975572] cloud-init[1887]: Nothing to do.
+
+[  116.976529] cloud-init[1887]: Complete!
+
+[  117.507346] cloud-init[1887]: Last metadata expiration check: 0:00:03 ago on Thu Jul 23 10:32:29 2026.
+
+[  117.648047] cloud-init[1887]: Dependencies resolved.
+
+[  117.714948] cloud-init[1887]: ================================================================================
+
+[  117.716749] cloud-init[1887]:  Package                 Arch    Version                     Repository    Size
+
+[  117.718445] cloud-init[1887]: ================================================================================
+
+[  117.720163] cloud-init[1887]: Installing:
+
+[  117.720916] cloud-init[1887]:  git                     x86_64  2.50.1-1.amzn2023.0.1       amazonlinux   53 k
+
+[  117.722557] cloud-init[1887]:  nginx                   x86_64  1:1.30.3-1.amzn2023.0.1     amazonlinux   34 k
+
+[  117.724221] cloud-init[1887]: Installing dependencies:
+
+[  117.725136] cloud-init[1887]:  generic-logos-httpd     noarch  18.0.0-12.amzn2023.0.3      amazonlinux   19 k
+
+[  117.726765] cloud-init[1887]:  git-core                x86_64  2.50.1-1.amzn2023.0.1       amazonlinux  4.9 M
+
+[  117.728400] cloud-init[1887]:  git-core-doc            noarch  2.50.1-1.amzn2023.0.1       amazonlinux  2.8 M
+
+[  117.730083] cloud-init[1887]:  gperftools-libs         x86_64  2.9.1-1.amzn2023.0.3        amazonlinux  308 k
+
+[  117.731736] cloud-init[1887]:  libunwind               x86_64  1.4.0-5.amzn2023.0.3        amazonlinux   66 k
+
+[  117.733419] cloud-init[1887]:  nginx-core              x86_64  1:1.30.3-1.amzn2023.0.1     amazonlinux  709 k
+
+[  117.735094] cloud-init[1887]:  nginx-filesystem        noarch  1:1.30.3-1.amzn2023.0.1     amazonlinux   10 k
+
+[  117.736753] cloud-init[1887]:  nginx-mimetypes         noarch  2.1.49-3.amzn2023.0.3       amazonlinux   21 k
+
+[  117.738391] cloud-init[1887]:  perl-AutoLoader         noarch  5.74-477.amzn2023.0.9       amazonlinux   22 k
+
+[  117.740063] cloud-init[1887]:  perl-B                  x86_64  1.80-477.amzn2023.0.9       amazonlinux  179 k
+
+[  117.741759] cloud-init[1887]:  perl-Carp               noarch  1.50-458.amzn2023.0.2       amazonlinux   29 k
+
+[  117.743390] cloud-init[1887]:  perl-Class-Struct       noarch  0.66-477.amzn2023.0.9       amazonlinux   22 k
+
+[  117.745037] cloud-init[1887]:  perl-Data-Dumper        x86_64  2.191-522.amzn2023.0.3      amazonlinux   57 k
+
+[  117.746621] cloud-init[1887]:  perl-Digest             noarch  1.20-1.amzn2023.0.2         amazonlinux   26 k
+
+[  117.748179] cloud-init[1887]:  perl-Digest-MD5         x86_64  2.59-521.amzn2023.0.2       amazonlinux   37 k
+
+[  117.749776] cloud-init[1887]:  perl-DynaLoader         x86_64  1.47-477.amzn2023.0.9       amazonlinux   26 k
+
+[  117.751360] cloud-init[1887]:  perl-Encode             x86_64  4:3.21-520.amzn2023.0.2     amazonlinux  1.7 M
+
+[  117.752940] cloud-init[1887]:  perl-Errno              x86_64  1.30-477.amzn2023.0.9       amazonlinux   15 k
+
+[  117.754509] cloud-init[1887]:  perl-Error              noarch  1:0.17030-2.amzn2023.0.1    amazonlinux   42 k
+
+[  117.756052] cloud-init[1887]:  perl-Exporter           noarch  5.79-520.amzn2023.0.1       amazonlinux   32 k
+
+[  117.757655] cloud-init[1887]:  perl-Fcntl              x86_64  1.13-477.amzn2023.0.9       amazonlinux   21 k
+
+[  117.759229] cloud-init[1887]:  perl-File-Basename      noarch  2.85-477.amzn2023.0.9       amazonlinux   18 k
+
+[  117.760803] cloud-init[1887]:  perl-File-Find          noarch  1.37-477.amzn2023.0.9       amazonlinux   26 k
+
+[  117.762365] cloud-init[1887]:  perl-File-Path          noarch  2.18-2.amzn2023.0.2         amazonlinux   36 k
+
+[  117.763917] cloud-init[1887]:  perl-File-Temp          noarch  1:0.231.200-2.amzn2023.0.1  amazonlinux   61 k
+
+[  117.765481] cloud-init[1887]:  perl-File-stat          noarch  1.09-477.amzn2023.0.9       amazonlinux   17 k
+
+[  117.767037] cloud-init[1887]:  perl-FileHandle         noarch  2.03-477.amzn2023.0.9       amazonlinux   16 k
+
+[  117.768623] cloud-init[1887]:  perl-Getopt-Long        noarch  1:2.58-521.amzn2023.0.1     amazonlinux   65 k
+
+[  117.770298] cloud-init[1887]:  perl-Getopt-Std         noarch  1.12-477.amzn2023.0.9       amazonlinux   16 k
+
+[  117.771959] cloud-init[1887]:  perl-Git                noarch  2.50.1-1.amzn2023.0.1       amazonlinux   41 k
+
+[  117.773617] cloud-init[1887]:  perl-HTTP-Tiny          noarch  0.092-2.amzn2023.0.2        amazonlinux   59 k
+
+[  117.775267] cloud-init[1887]:  perl-IO                 x86_64  1.43-477.amzn2023.0.9       amazonlinux   87 k
+
+[  117.776923] cloud-init[1887]:  perl-IO-Socket-IP       noarch  0.43-522.amzn2023.0.1       amazonlinux   44 k
+
+[  117.778533] cloud-init[1887]:  perl-IO-Socket-SSL      noarch  2.075-1.amzn2023.0.3        amazonlinux  216 k
+
+[  117.780196] cloud-init[1887]:  perl-IPC-Open3          noarch  1.21-477.amzn2023.0.9       amazonlinux   23 k
+
+[  117.781857] cloud-init[1887]:  perl-MIME-Base64        x86_64  3.16-2.amzn2023.0.3         amazonlinux   31 k
+
+[  117.783476] cloud-init[1887]:  perl-Net-SSLeay         x86_64  1.94-3.amzn2023.0.3         amazonlinux  392 k
+
+[  117.785129] cloud-init[1887]:  perl-POSIX              x86_64  1.94-477.amzn2023.0.9       amazonlinux   97 k
+
+[  117.786832] cloud-init[1887]:  perl-PathTools          x86_64  3.78-459.amzn2023.0.3       amazonlinux   85 k
+
+[  117.788547] cloud-init[1887]:  perl-Pod-Escapes        noarch  1:1.07-458.amzn2023.0.2     amazonlinux   20 k
+
+[  117.790213] cloud-init[1887]:  perl-Pod-Perldoc        noarch  3.28.01-459.amzn2023.0.3    amazonlinux   84 k
+
+[  117.791772] cloud-init[1887]:  perl-Pod-Simple         noarch  1:3.42-2.amzn2023.0.2       amazonlinux  215 k
+
+[  117.793482] cloud-init[1887]:  perl-Pod-Usage          noarch  4:2.01-2.amzn2023.0.2       amazonlinux   41 k
+
+[  117.795045] cloud-init[1887]:  perl-Scalar-List-Utils  x86_64  4:1.56-459.amzn2023.0.3     amazonlinux   71 k
+
+[  117.796606] cloud-init[1887]:  perl-SelectSaver        noarch  1.02-477.amzn2023.0.9       amazonlinux   12 k
+
+[  117.798196] cloud-init[1887]:  perl-Socket             x86_64  4:2.032-1.amzn2023.0.3      amazonlinux   55 k
+
+[  117.799735] cloud-init[1887]:  perl-Storable           x86_64  1:3.37-522.amzn2023.0.2     amazonlinux   98 k
+
+[  117.801332] cloud-init[1887]:  perl-Symbol             noarch  1.08-477.amzn2023.0.9       amazonlinux   14 k
+
+[  117.802917] cloud-init[1887]:  perl-Term-ANSIColor     noarch  5.01-459.amzn2023.0.2       amazonlinux   48 k
+
+[  117.804467] cloud-init[1887]:  perl-Term-Cap           noarch  1.17-458.amzn2023.0.2       amazonlinux   22 k
+
+[  117.806060] cloud-init[1887]:  perl-TermReadKey        x86_64  2.38-9.amzn2023.0.3         amazonlinux   36 k
+
+[  117.807600] cloud-init[1887]:  perl-Text-ParseWords    noarch  3.30-458.amzn2023.0.2       amazonlinux   17 k
+
+[  117.809158] cloud-init[1887]:  perl-Text-Tabs+Wrap     noarch  2021.0726-1.amzn2023.0.1    amazonlinux   22 k
+
+[  117.810796] cloud-init[1887]:  perl-Time-HiRes         x86_64  4:1.9764-460.amzn2023.0.3   amazonlinux   58 k
+
+[  117.812478] cloud-init[1887]:  perl-Time-Local         noarch  2:1.300-5.amzn2023.0.2      amazonlinux   34 k
+
+[  117.814136] cloud-init[1887]:  perl-URI                noarch  5.18-1.amzn2023.0.1         amazonlinux  111 k
+
+[  117.815753] cloud-init[1887]:  perl-base               noarch  2.27-477.amzn2023.0.9       amazonlinux   17 k
+
+[  117.817423] cloud-init[1887]:  perl-constant           noarch  1.33-459.amzn2023.0.2       amazonlinux   23 k
+
+[  117.819095] cloud-init[1887]:  perl-if                 noarch  0.60.800-477.amzn2023.0.9   amazonlinux   14 k
+
+[  117.820824] cloud-init[1887]:  perl-interpreter        x86_64  4:5.32.1-477.amzn2023.0.9   amazonlinux   71 k
+
+[  117.822514] cloud-init[1887]:  perl-lib                x86_64  0.65-477.amzn2023.0.9       amazonlinux   15 k
+
+[  117.824164] cloud-init[1887]:  perl-libnet             noarch  3.13-2.amzn2023.0.2         amazonlinux  126 k
+
+[  117.825863] cloud-init[1887]:  perl-libs               x86_64  4:5.32.1-477.amzn2023.0.9   amazonlinux  2.1 M
+
+[  117.827548] cloud-init[1887]:  perl-mro                x86_64  1.23-477.amzn2023.0.9       amazonlinux   28 k
+
+[  117.829235] cloud-init[1887]:  perl-overload           noarch  1.31-477.amzn2023.0.9       amazonlinux   46 k
+
+[  117.830909] cloud-init[1887]:  perl-overloading        noarch  0.02-477.amzn2023.0.9       amazonlinux   13 k
+
+[  117.832563] cloud-init[1887]:  perl-parent             noarch  1:0.238-458.amzn2023.0.2    amazonlinux   14 k
+
+[  117.834238] cloud-init[1887]:  perl-podlators          noarch  1:4.14-458.amzn2023.0.2     amazonlinux  112 k
+
+[  117.835982] cloud-init[1887]:  perl-subs               noarch  1.03-477.amzn2023.0.9       amazonlinux   12 k
+
+[  117.837718] cloud-init[1887]:  perl-vars               noarch  1.05-477.amzn2023.0.9       amazonlinux   13 k
+
+[  117.839424] cloud-init[1887]: Installing weak dependencies:
+
+[  117.840581] cloud-init[1887]:  perl-NDBM_File          x86_64  1.15-477.amzn2023.0.9       amazonlinux   22 k
+
+[  117.842227] cloud-init[1887]: Transaction Summary
+
+[  117.843018] cloud-init[1887]: ================================================================================
+
+[  117.844614] cloud-init[1887]: Install  73 Packages
+
+[  117.845489] cloud-init[1887]: Total download size: 16 M
+
+[  117.846385] cloud-init[1887]: Installed size: 70 M
+
+[  117.847206] cloud-init[1887]: Downloading Packages:
+
+[  117.848037] cloud-init[1887]: (1/73): generic-logos-httpd-18.0.0-12.amzn2023. 450 kB/s |  19 kB     00:00
+
+[  117.849590] cloud-init[1887]: (2/73): git-2.50.1-1.amzn2023.0.1.x86_64.rpm    1.2 MB/s |  53 kB     00:00
+
+[  117.851195] cloud-init[1887]: (3/73): gperftools-libs-2.9.1-1.amzn2023.0.3.x8  11 MB/s | 308 kB     00:00
+
+[  117.876657] cloud-init[1887]: (4/73): git-core-2.50.1-1.amzn2023.0.1.x86_64.r  47 MB/s | 4.9 MB     00:00
+
+[  117.881356] cloud-init[1887]: (5/73): libunwind-1.4.0-5.amzn2023.0.3.x86_64.r 1.8 MB/s |  66 kB     00:00
+
+[  117.910178] cloud-init[1887]: (6/73): git-core-doc-2.50.1-1.amzn2023.0.1.noar  29 MB/s | 2.8 MB     00:00
+
+[  117.913826] cloud-init[1887]: (7/73): nginx-1.30.3-1.amzn2023.0.1.x86_64.rpm  938 kB/s |  34 kB     00:00
+
+[  117.921914] cloud-init[1887]: (8/73): nginx-core-1.30.3-1.amzn2023.0.1.x86_64  17 MB/s | 709 kB     00:00
+
+[  117.937207] cloud-init[1887]: (9/73): nginx-filesystem-1.30.3-1.amzn2023.0.1. 390 kB/s |  10 kB     00:00
+
+[  117.940199] cloud-init[1887]: (10/73): nginx-mimetypes-2.1.49-3.amzn2023.0.3. 816 kB/s |  21 kB     00:00
+
+[  117.945017] cloud-init[1887]: (11/73): perl-AutoLoader-5.74-477.amzn2023.0.9. 953 kB/s |  22 kB     00:00
+
+[  117.965099] cloud-init[1887]: (12/73): perl-B-1.80-477.amzn2023.0.9.x86_64.rp 6.4 MB/s | 179 kB     00:00
+
+[  117.968365] cloud-init[1887]: (13/73): perl-Class-Struct-0.66-477.amzn2023.0. 977 kB/s |  22 kB     00:00
+
+[  117.970322] cloud-init[1887]: (14/73): perl-Carp-1.50-458.amzn2023.0.2.noarch 991 kB/s |  29 kB     00:00
+
+[  117.990429] cloud-init[1887]: (15/73): perl-Data-Dumper-2.191-522.amzn2023.0. 2.3 MB/s |  57 kB     00:00
+
+[  117.993556] cloud-init[1887]: (16/73): perl-Digest-1.20-1.amzn2023.0.2.noarch 1.0 MB/s |  26 kB     00:00
+
+[  117.995242] cloud-init[1887]: (17/73): perl-Digest-MD5-2.59-521.amzn2023.0.2. 1.5 MB/s |  37 kB     00:00
+
+[  118.016445] cloud-init[1887]: (18/73): perl-DynaLoader-1.47-477.amzn2023.0.9. 1.0 MB/s |  26 kB     00:00
+
+[  118.019000] cloud-init[1887]: (19/73): perl-Errno-1.30-477.amzn2023.0.9.x86_6 650 kB/s |  15 kB     00:00
+
+[  118.035244] cloud-init[1887]: (20/73): perl-Encode-3.21-520.amzn2023.0.2.x86_  41 MB/s | 1.7 MB     00:00
+
+[  118.042475] cloud-init[1887]: (21/73): perl-Error-0.17030-2.amzn2023.0.1.noar 1.6 MB/s |  42 kB     00:00
+
+[  118.044711] cloud-init[1887]: (22/73): perl-Exporter-5.79-520.amzn2023.0.1.no 1.2 MB/s |  32 kB     00:00
+
+[  118.056658] cloud-init[1887]: (23/73): perl-Fcntl-1.13-477.amzn2023.0.9.x86_6 991 kB/s |  21 kB     00:00
+
+[  118.067671] cloud-init[1887]: (24/73): perl-File-Basename-2.85-477.amzn2023.0 713 kB/s |  18 kB     00:00
+
+[  118.070620] cloud-init[1887]: (25/73): perl-File-Find-1.37-477.amzn2023.0.9.n 1.0 MB/s |  26 kB     00:00
+
+[  118.085650] cloud-init[1887]: (26/73): perl-File-Path-2.18-2.amzn2023.0.2.noa 1.2 MB/s |  36 kB     00:00
+
+[  118.093415] cloud-init[1887]: (27/73): perl-File-stat-1.09-477.amzn2023.0.9.n 781 kB/s |  17 kB     00:00
+
+[  118.097520] cloud-init[1887]: (28/73): perl-File-Temp-0.231.200-2.amzn2023.0. 2.0 MB/s |  61 kB     00:00
+
+[  118.111651] cloud-init[1887]: (29/73): perl-FileHandle-2.03-477.amzn2023.0.9. 620 kB/s |  16 kB     00:00
+
+[  118.114937] cloud-init[1887]: (30/73): perl-Getopt-Long-2.58-521.amzn2023.0.1 3.0 MB/s |  65 kB     00:00
+
+[  118.122722] cloud-init[1887]: (31/73): perl-Getopt-Std-1.12-477.amzn2023.0.9. 641 kB/s |  16 kB     00:00
+
+[  118.138389] cloud-init[1887]: (32/73): perl-Git-2.50.1-1.amzn2023.0.1.noarch. 1.5 MB/s |  41 kB     00:00
+
+[  118.140852] cloud-init[1887]: (33/73): perl-HTTP-Tiny-0.092-2.amzn2023.0.2.no 2.2 MB/s |  59 kB     00:00
+
+[  118.154768] cloud-init[1887]: (34/73): perl-IO-1.43-477.amzn2023.0.9.x86_64.r 2.7 MB/s |  87 kB     00:00
+
+[  118.164979] cloud-init[1887]: (35/73): perl-IO-Socket-IP-0.43-522.amzn2023.0. 1.6 MB/s |  44 kB     00:00
+
+[  118.168776] cloud-init[1887]: (36/73): perl-IO-Socket-SSL-2.075-1.amzn2023.0. 7.7 MB/s | 216 kB     00:00
+
+[  118.184640] cloud-init[1887]: (37/73): perl-IPC-Open3-1.21-477.amzn2023.0.9.n 789 kB/s |  23 kB     00:00
+
+[  118.190668] cloud-init[1887]: (38/73): perl-MIME-Base64-3.16-2.amzn2023.0.3.x 1.2 MB/s |  31 kB     00:00
+
+[  118.193688] cloud-init[1887]: (39/73): perl-NDBM_File-1.15-477.amzn2023.0.9.x 916 kB/s |  22 kB     00:00
+
+[  118.214729] cloud-init[1887]: (40/73): perl-Net-SSLeay-1.94-3.amzn2023.0.3.x8  13 MB/s | 392 kB     00:00
+
+[  118.218018] cloud-init[1887]: (41/73): perl-POSIX-1.94-477.amzn2023.0.9.x86_6 3.5 MB/s |  97 kB     00:00
+
+[  118.220249] cloud-init[1887]: (42/73): perl-PathTools-3.78-459.amzn2023.0.3.x 3.2 MB/s |  85 kB     00:00
+
+[  118.243193] cloud-init[1887]: (43/73): perl-Pod-Simple-3.42-2.amzn2023.0.2.no 9.4 MB/s | 215 kB     00:00
+
+[  118.245129] cloud-init[1887]: (44/73): perl-Pod-Escapes-1.07-458.amzn2023.0.2 685 kB/s |  20 kB     00:00
+
+[  118.247353] cloud-init[1887]: (45/73): perl-Pod-Perldoc-3.28.01-459.amzn2023. 2.8 MB/s |  84 kB     00:00
+
+[  118.270292] cloud-init[1887]: (46/73): perl-Scalar-List-Utils-1.56-459.amzn20 2.8 MB/s |  71 kB     00:00
+
+[  118.272249] cloud-init[1887]: (47/73): perl-Pod-Usage-2.01-2.amzn2023.0.2.noa 1.4 MB/s |  41 kB     00:00
+
+[  118.274739] cloud-init[1887]: (48/73): perl-SelectSaver-1.02-477.amzn2023.0.9 445 kB/s |  12 kB     00:00
+
+[  118.296027] cloud-init[1887]: (49/73): perl-Socket-2.032-1.amzn2023.0.3.x86_6 2.1 MB/s |  55 kB     00:00
+
+[  118.299963] cloud-init[1887]: (50/73): perl-Symbol-1.08-477.amzn2023.0.9.noar 583 kB/s |  14 kB     00:00
+
+[  118.303878] cloud-init[1887]: (51/73): perl-Storable-3.37-522.amzn2023.0.2.x8 3.1 MB/s |  98 kB     00:00
+
+[  118.321096] cloud-init[1887]: (52/73): perl-Term-ANSIColor-5.01-459.amzn2023. 1.9 MB/s |  48 kB     00:00
+
+[  118.324644] cloud-init[1887]: (53/73): perl-Term-Cap-1.17-458.amzn2023.0.2.no 932 kB/s |  22 kB     00:00
+
+[  118.329891] cloud-init[1887]: (54/73): perl-TermReadKey-2.38-9.amzn2023.0.3.x 1.4 MB/s |  36 kB     00:00
+
+[  118.344954] cloud-init[1887]: (55/73): perl-Text-ParseWords-3.30-458.amzn2023 711 kB/s |  17 kB     00:00
+
+[  118.348748] cloud-init[1887]: (56/73): perl-Text-Tabs+Wrap-2021.0726-1.amzn20 948 kB/s |  22 kB     00:00
+
+[  118.354173] cloud-init[1887]: (57/73): perl-Time-HiRes-1.9764-460.amzn2023.0. 2.4 MB/s |  58 kB     00:00
+
+[  118.370569] cloud-init[1887]: (58/73): perl-Time-Local-1.300-5.amzn2023.0.2.n 1.3 MB/s |  34 kB     00:00
+
+[  118.373052] cloud-init[1887]: (59/73): perl-URI-5.18-1.amzn2023.0.1.noarch.rp 4.5 MB/s | 111 kB     00:00
+
+[  118.380409] cloud-init[1887]: (60/73): perl-base-2.27-477.amzn2023.0.9.noarch 642 kB/s |  17 kB     00:00
+
+[  118.396844] cloud-init[1887]: (61/73): perl-constant-1.33-459.amzn2023.0.2.no 906 kB/s |  23 kB     00:00
+
+[  118.400040] cloud-init[1887]: (62/73): perl-if-0.60.800-477.amzn2023.0.9.noar 570 kB/s |  14 kB     00:00
+
+[  118.404387] cloud-init[1887]: (63/73): perl-interpreter-5.32.1-477.amzn2023.0 3.2 MB/s |  71 kB     00:00
+
+[  118.427398] cloud-init[1887]: (64/73): perl-lib-0.65-477.amzn2023.0.9.x86_64. 533 kB/s |  15 kB     00:00
+
+[  118.431455] cloud-init[1887]: (65/73): perl-libnet-3.13-2.amzn2023.0.2.noarch 4.2 MB/s | 126 kB     00:00
+
+[  118.448755] cloud-init[1887]: (66/73): perl-libs-5.32.1-477.amzn2023.0.9.x86_  48 MB/s | 2.1 MB     00:00
+
+[  118.457572] cloud-init[1887]: (67/73): perl-mro-1.23-477.amzn2023.0.9.x86_64. 1.0 MB/s |  28 kB     00:00
+
+[  118.464291] cloud-init[1887]: (68/73): perl-overload-1.31-477.amzn2023.0.9.no 1.5 MB/s |  46 kB     00:00
+
+[  118.475154] cloud-init[1887]: (69/73): perl-overloading-0.02-477.amzn2023.0.9 540 kB/s |  13 kB     00:00
+
+[  118.481486] cloud-init[1887]: (70/73): perl-parent-0.238-458.amzn2023.0.2.noa 662 kB/s |  14 kB     00:00
+
+[  118.485394] cloud-init[1887]: (71/73): perl-podlators-4.14-458.amzn2023.0.2.n 5.7 MB/s | 112 kB     00:00
+
+[  118.499615] cloud-init[1887]: (72/73): perl-subs-1.03-477.amzn2023.0.9.noarch 533 kB/s |  12 kB     00:00
+
+[  118.507244] cloud-init[1887]: (73/73): perl-vars-1.05-477.amzn2023.0.9.noarch 562 kB/s |  13 kB     00:00
+
+[  118.510596] cloud-init[1887]: --------------------------------------------------------------------------------
+
+[  118.512374] cloud-init[1887]: Total                                            20 MB/s |  16 MB     00:00
+
+[  119.479158] cloud-init[1887]: Running transaction check
+
+[  119.558031] cloud-init[1887]: Transaction check succeeded.
+
+[  119.559131] cloud-init[1887]: Running transaction test
+
+[  119.874758] cloud-init[1887]: Transaction test succeeded.
+
+[  119.875885] cloud-init[1887]: Running transaction
+
+[  120.438199] cloud-init[1887]:   Preparing        :                                                        1/1
+
+[  120.525114] cloud-init[1887]:   Running scriptlet: nginx-filesystem-1:1.30.3-1.amzn2023.0.1.noarch       1/73
+
+[  120.762798] cloud-init[1887]:   Installing       : nginx-filesystem-1:1.30.3-1.amzn2023.0.1.noarch       1/73
+
+[  121.584037] cloud-init[1887]:   Installing       : git-core-2.50.1-1.amzn2023.0.1.x86_64                 2/73
+
+[  121.619456] cloud-init[1887]:   Installing       : git-core-doc-2.50.1-1.amzn2023.0.1.noarch             3/73
+
+[  121.631504] cloud-init[1887]:   Installing       : nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch          4/73
+
+[  121.642427] cloud-init[1887]:   Installing       : perl-Digest-1.20-1.amzn2023.0.2.noarch                5/73
+
+[  121.659624] cloud-init[1887]:   Installing       : perl-Digest-MD5-2.59-521.amzn2023.0.2.x86_64          6/73
+
+[  121.667186] cloud-init[1887]:   Installing       : perl-B-1.80-477.amzn2023.0.9.x86_64                   7/73
+
+[  121.676409] cloud-init[1887]:   Installing       : perl-FileHandle-2.03-477.amzn2023.0.9.noarch          8/73
+
+[  121.698228] cloud-init[1887]:   Installing       : perl-Data-Dumper-2.191-522.amzn2023.0.3.x86_64        9/73
+
+[  121.735149] cloud-init[1887]:   Installing       : perl-libnet-3.13-2.amzn2023.0.2.noarch               10/73
+
+[  121.743364] cloud-init[1887]:   Installing       : perl-URI-5.18-1.amzn2023.0.1.noarch                  11/73
+
+[  121.752032] cloud-init[1887]:   Installing       : perl-AutoLoader-5.74-477.amzn2023.0.9.noarch         12/73
+
+[  121.761565] cloud-init[1887]:   Installing       : perl-Text-Tabs+Wrap-2021.0726-1.amzn2023.0.1.noarc   13/73
+
+[  121.767616] cloud-init[1887]:   Installing       : perl-Time-HiRes-4:1.9764-460.amzn2023.0.3.x86_64     14/73
+
+[  121.776627] cloud-init[1887]:   Installing       : perl-if-0.60.800-477.amzn2023.0.9.noarch             15/73
+
+[  121.788298] cloud-init[1887]:   Installing       : perl-IO-Socket-IP-0.43-522.amzn2023.0.1.noarch       16/73
+
+[  121.796008] cloud-init[1887]:   Installing       : perl-Time-Local-2:1.300-5.amzn2023.0.2.noarch        17/73
+
+[  121.816522] cloud-init[1887]:   Installing       : perl-File-Path-2.18-2.amzn2023.0.2.noarch            18/73
+
+[  121.835600] cloud-init[1887]:   Installing       : perl-Pod-Escapes-1:1.07-458.amzn2023.0.2.noarch      19/73
+
+[  121.905104] cloud-init[1887]:   Installing       : perl-IO-Socket-SSL-2.075-1.amzn2023.0.3.noarch       20/73
+
+[  121.911957] cloud-init[1887]:   Installing       : perl-Net-SSLeay-1.94-3.amzn2023.0.3.x86_64           21/73
+
+[  121.918518] cloud-init[1887]:   Installing       : perl-Class-Struct-0.66-477.amzn2023.0.9.noarch       22/73
+
+[  121.926064] cloud-init[1887]:   Installing       : perl-POSIX-1.94-477.amzn2023.0.9.x86_64              23/73
+
+[  121.931232] cloud-init[1887]:   Installing       : perl-Term-ANSIColor-5.01-459.amzn2023.0.2.noarch     24/73
+
+[  121.934780] cloud-init[1887]:   Installing       : perl-IPC-Open3-1.21-477.amzn2023.0.9.noarch          25/73
+
+[  121.942303] cloud-init[1887]:   Installing       : perl-subs-1.03-477.amzn2023.0.9.noarch               26/73
+
+[  121.949919] cloud-init[1887]:   Installing       : perl-File-Temp-1:0.231.200-2.amzn2023.0.1.noarch     27/73
+
+[  121.985282] cloud-init[1887]:   Installing       : perl-Term-Cap-1.17-458.amzn2023.0.2.noarch           28/73
+
+[  121.996979] cloud-init[1887]:   Installing       : perl-Pod-Simple-1:3.42-2.amzn2023.0.2.noarch         29/73
+
+[  122.006962] cloud-init[1887]:   Installing       : perl-HTTP-Tiny-0.092-2.amzn2023.0.2.noarch           30/73
+
+[  122.013522] cloud-init[1887]:   Installing       : perl-Socket-4:2.032-1.amzn2023.0.3.x86_64            31/73
+
+[  122.018643] cloud-init[1887]:   Installing       : perl-SelectSaver-1.02-477.amzn2023.0.9.noarch        32/73
+
+[  122.023998] cloud-init[1887]:   Installing       : perl-Symbol-1.08-477.amzn2023.0.9.noarch             33/73
+
+[  122.041004] cloud-init[1887]:   Installing       : perl-File-stat-1.09-477.amzn2023.0.9.noarch          34/73
+
+[  122.064313] cloud-init[1887]:   Installing       : perl-podlators-1:4.14-458.amzn2023.0.2.noarch        35/73
+
+[  122.072117] cloud-init[1887]:   Installing       : perl-Pod-Perldoc-3.28.01-459.amzn2023.0.3.noarch     36/73
+
+[  122.079378] cloud-init[1887]:   Installing       : perl-Fcntl-1.13-477.amzn2023.0.9.x86_64              37/73
+
+[  122.084635] cloud-init[1887]:   Installing       : perl-Text-ParseWords-3.30-458.amzn2023.0.2.noarch    38/73
+
+[  122.091137] cloud-init[1887]:   Installing       : perl-base-2.27-477.amzn2023.0.9.noarch               39/73
+
+[  122.106427] cloud-init[1887]:   Installing       : perl-mro-1.23-477.amzn2023.0.9.x86_64                40/73
+
+[  122.112211] cloud-init[1887]:   Installing       : perl-IO-1.43-477.amzn2023.0.9.x86_64                 41/73
+
+[  122.119793] cloud-init[1887]:   Installing       : perl-overloading-0.02-477.amzn2023.0.9.noarch        42/73
+
+[  122.125550] cloud-init[1887]:   Installing       : perl-Pod-Usage-4:2.01-2.amzn2023.0.2.noarch          43/73
+
+[  122.129251] cloud-init[1887]:   Installing       : perl-Errno-1.30-477.amzn2023.0.9.x86_64              44/73
+
+[  122.133413] cloud-init[1887]:   Installing       : perl-File-Basename-2.85-477.amzn2023.0.9.noarch      45/73
+
+[  122.141286] cloud-init[1887]:   Installing       : perl-Getopt-Std-1.12-477.amzn2023.0.9.noarch         46/73
+
+[  122.153328] cloud-init[1887]:   Installing       : perl-MIME-Base64-3.16-2.amzn2023.0.3.x86_64          47/73
+
+[  122.160073] cloud-init[1887]:   Installing       : perl-Scalar-List-Utils-4:1.56-459.amzn2023.0.3.x86   48/73
+
+[  122.167233] cloud-init[1887]:   Installing       : perl-constant-1.33-459.amzn2023.0.2.noarch           49/73
+
+[  122.171689] cloud-init[1887]:   Installing       : perl-Storable-1:3.37-522.amzn2023.0.2.x86_64         50/73
+
+[  122.175956] cloud-init[1887]:   Installing       : perl-overload-1.31-477.amzn2023.0.9.noarch           51/73
+
+[  122.179637] cloud-init[1887]:   Installing       : perl-parent-1:0.238-458.amzn2023.0.2.noarch          52/73
+
+[  122.190171] cloud-init[1887]:   Installing       : perl-vars-1.05-477.amzn2023.0.9.noarch               53/73
+
+[  122.194356] cloud-init[1887]:   Installing       : perl-Getopt-Long-1:2.58-521.amzn2023.0.1.noarch      54/73
+
+[  122.200352] cloud-init[1887]:   Installing       : perl-DynaLoader-1.47-477.amzn2023.0.9.x86_64         55/73
+
+[  122.206730] cloud-init[1887]:   Installing       : perl-Carp-1.50-458.amzn2023.0.2.noarch               56/73
+
+[  122.211748] cloud-init[1887]:   Installing       : perl-Exporter-5.79-520.amzn2023.0.1.noarch           57/73
+
+[  122.227797] cloud-init[1887]:   Installing       : perl-NDBM_File-1.15-477.amzn2023.0.9.x86_64          58/73
+
+[  122.309694] cloud-init[1887]:   Installing       : perl-PathTools-3.78-459.amzn2023.0.3.x86_64          59/73
+
+[  122.695320] cloud-init[1887]:   Installing       : perl-Encode-4:3.21-520.amzn2023.0.2.x86_64           60/73
+
+[  122.711349] cloud-init[1887]:   Installing       : perl-libs-4:5.32.1-477.amzn2023.0.9.x86_64           61/73
+
+[  122.724042] cloud-init[1887]:   Installing       : perl-interpreter-4:5.32.1-477.amzn2023.0.9.x86_64    62/73
+
+[  122.731100] cloud-init[1887]:   Installing       : perl-Error-1:0.17030-2.amzn2023.0.1.noarch           63/73
+
+[  122.740109] cloud-init[1887]:   Installing       : perl-File-Find-1.37-477.amzn2023.0.9.noarch          64/73
+
+[  122.746507] cloud-init[1887]:   Installing       : perl-TermReadKey-2.38-9.amzn2023.0.3.x86_64          65/73
+
+[  122.753751] cloud-init[1887]:   Installing       : perl-lib-0.65-477.amzn2023.0.9.x86_64                66/73
+
+[  122.765553] cloud-init[1887]:   Installing       : perl-Git-2.50.1-1.amzn2023.0.1.noarch                67/73
+
+[  122.775947] cloud-init[1887]:   Installing       : git-2.50.1-1.amzn2023.0.1.x86_64                     68/73
+
+[  122.793306] cloud-init[1887]:   Installing       : libunwind-1.4.0-5.amzn2023.0.3.x86_64                69/73
+
+[  122.819630] cloud-init[1887]:   Installing       : gperftools-libs-2.9.1-1.amzn2023.0.3.x86_64          70/73
+
+[  122.828038] cloud-init[1887]:   Installing       : nginx-core-1:1.30.3-1.amzn2023.0.1.x86_64            71/73
+
+[  122.841940] cloud-init[1887]:   Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch    72/73
+
+[  122.844866] cloud-init[1887]:   Installing       : nginx-1:1.30.3-1.amzn2023.0.1.x86_64                 73/73
+
+[  123.213081] zram_generator::config[2317]: zram0: system has too much memory (912MB), limit is 800MB, ignoring.
+
+[  123.612508] cloud-init[1887]:   Running scriptlet: nginx-1:1.30.3-1.amzn2023.0.1.x86_64                 73/73
+
+[  123.614486] cloud-init[1887]:   Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch     1/73
+
+[  123.615598] cloud-init[1887]:   Verifying        : git-2.50.1-1.amzn2023.0.1.x86_64                      2/73
+
+[  123.619925] cloud-init[1887]:   Verifying        : git-core-2.50.1-1.amzn2023.0.1.x86_64                 3/73
+
+[  123.620056] cloud-init[1887]:   Verifying        : git-core-doc-2.50.1-1.amzn2023.0.1.noarch             4/73
+
+[  123.620458] cloud-init[1887]:   Verifying        : gperftools-libs-2.9.1-1.amzn2023.0.3.x86_64           5/73
+
+[  123.620659] cloud-init[1887]:   Verifying        : libunwind-1.4.0-5.amzn2023.0.3.x86_64                 6/73
+
+[  123.620870] cloud-init[1887]:   Verifying        : nginx-1:1.30.3-1.amzn2023.0.1.x86_64                  7/73
+
+[  123.621077] cloud-init[1887]:   Verifying        : nginx-core-1:1.30.3-1.amzn2023.0.1.x86_64             8/73
+
+[  123.621290] cloud-init[1887]:   Verifying        : nginx-filesystem-1:1.30.3-1.amzn2023.0.1.noarch       9/73
+
+[  123.621511] cloud-init[1887]:   Verifying        : nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch         10/73
+
+[  123.621733] cloud-init[1887]:   Verifying        : perl-AutoLoader-5.74-477.amzn2023.0.9.noarch         11/73
+
+[  123.621943] cloud-init[1887]:   Verifying        : perl-B-1.80-477.amzn2023.0.9.x86_64                  12/73
+
+[  123.622153] cloud-init[1887]:   Verifying        : perl-Carp-1.50-458.amzn2023.0.2.noarch               13/73
+
+[  123.622359] cloud-init[1887]:   Verifying        : perl-Class-Struct-0.66-477.amzn2023.0.9.noarch       14/73
+
+[  123.622568] cloud-init[1887]:   Verifying        : perl-Data-Dumper-2.191-522.amzn2023.0.3.x86_64       15/73
+
+[  123.622779] cloud-init[1887]:   Verifying        : perl-Digest-1.20-1.amzn2023.0.2.noarch               16/73
+
+[  123.622989] cloud-init[1887]:   Verifying        : perl-Digest-MD5-2.59-521.amzn2023.0.2.x86_64         17/73
+
+[  123.623203] cloud-init[1887]:   Verifying        : perl-DynaLoader-1.47-477.amzn2023.0.9.x86_64         18/73
+
+[  123.623410] cloud-init[1887]:   Verifying        : perl-Encode-4:3.21-520.amzn2023.0.2.x86_64           19/73
+
+[  123.623620] cloud-init[1887]:   Verifying        : perl-Errno-1.30-477.amzn2023.0.9.x86_64              20/73
+
+[  123.623829] cloud-init[1887]:   Verifying        : perl-Error-1:0.17030-2.amzn2023.0.1.noarch           21/73
+
+[  123.624039] cloud-init[1887]:   Verifying        : perl-Exporter-5.79-520.amzn2023.0.1.noarch           22/73
+
+[  123.624241] cloud-init[1887]:   Verifying        : perl-Fcntl-1.13-477.amzn2023.0.9.x86_64              23/73
+
+[  123.624457] cloud-init[1887]:   Verifying        : perl-File-Basename-2.85-477.amzn2023.0.9.noarch      24/73
+
+[  123.624680] cloud-init[1887]:   Verifying        : perl-File-Find-1.37-477.amzn2023.0.9.noarch          25/73
+
+[  123.624889] cloud-init[1887]:   Verifying        : perl-File-Path-2.18-2.amzn2023.0.2.noarch            26/73
+
+[  123.625099] cloud-init[1887]:   Verifying        : perl-File-Temp-1:0.231.200-2.amzn2023.0.1.noarch     27/73
+
+[  123.626724] cloud-init[1887]:   Verifying        : perl-File-stat-1.09-477.amzn2023.0.9.noarch          28/73
+
+[  123.660216] cloud-init[1887]:   Verifying        : perl-FileHandle-2.03-477.amzn2023.0.9.noarch         29/73
+
+[  123.661985] cloud-init[1887]:   Verifying        : perl-Getopt-Long-1:2.58-521.amzn2023.0.1.noarch      30/73
+
+[  123.663629] cloud-init[1887]:   Verifying        : perl-Getopt-Std-1.12-477.amzn2023.0.9.noarch         31/73
+
+[  123.665662] cloud-init[1887]:   Verifying        : perl-Git-2.50.1-1.amzn2023.0.1.noarch                32/73
+
+[  123.665748] cloud-init[1887]:   Verifying        : perl-HTTP-Tiny-0.092-2.amzn2023.0.2.noarch           33/73
+
+[  123.666178] cloud-init[1887]:   Verifying        : perl-IO-1.43-477.amzn2023.0.9.x86_64                 34/73
+
+[  123.666382] cloud-init[1887]:   Verifying        : perl-IO-Socket-IP-0.43-522.amzn2023.0.1.noarch       35/73
+
+[  123.666588] cloud-init[1887]:   Verifying        : perl-IO-Socket-SSL-2.075-1.amzn2023.0.3.noarch       36/73
+
+[  123.666806] cloud-init[1887]:   Verifying        : perl-IPC-Open3-1.21-477.amzn2023.0.9.noarch          37/73
+
+[  123.667016] cloud-init[1887]:   Verifying        : perl-MIME-Base64-3.16-2.amzn2023.0.3.x86_64          38/73
+
+[  123.667232] cloud-init[1887]:   Verifying        : perl-NDBM_File-1.15-477.amzn2023.0.9.x86_64          39/73
+
+[  123.667448] cloud-init[1887]:   Verifying        : perl-Net-SSLeay-1.94-3.amzn2023.0.3.x86_64           40/73
+
+[  123.667668] cloud-init[1887]:   Verifying        : perl-POSIX-1.94-477.amzn2023.0.9.x86_64              41/73
+
+[  123.667873] cloud-init[1887]:   Verifying        : perl-PathTools-3.78-459.amzn2023.0.3.x86_64          42/73
+
+[  123.668079] cloud-init[1887]:   Verifying        : perl-Pod-Escapes-1:1.07-458.amzn2023.0.2.noarch      43/73
+
+[  123.668294] cloud-init[1887]:   Verifying        : perl-Pod-Perldoc-3.28.01-459.amzn2023.0.3.noarch     44/73
+
+[  123.668506] cloud-init[1887]:   Verifying        : perl-Pod-Simple-1:3.42-2.amzn2023.0.2.noarch         45/73
+
+[  123.668716] cloud-init[1887]:   Verifying        : perl-Pod-Usage-4:2.01-2.amzn2023.0.2.noarch          46/73
+
+[  123.668928] cloud-init[1887]:   Verifying        : perl-Scalar-List-Utils-4:1.56-459.amzn2023.0.3.x86   47/73
+
+[  123.669134] cloud-init[1887]:   Verifying        : perl-SelectSaver-1.02-477.amzn2023.0.9.noarch        48/73
+
+[  123.669343] cloud-init[1887]:   Verifying        : perl-Socket-4:2.032-1.amzn2023.0.3.x86_64            49/73
+
+[  123.669552] cloud-init[1887]:   Verifying        : perl-Storable-1:3.37-522.amzn2023.0.2.x86_64         50/73
+
+[  123.669762] cloud-init[1887]:   Verifying        : perl-Symbol-1.08-477.amzn2023.0.9.noarch             51/73
+
+[  123.669971] cloud-init[1887]:   Verifying        : perl-Term-ANSIColor-5.01-459.amzn2023.0.2.noarch     52/73
+
+[  123.670398] cloud-init[1887]:   Verifying        : perl-Term-Cap-1.17-458.amzn2023.0.2.noarch           53/73
+
+[  123.670593] cloud-init[1887]:   Verifying        : perl-TermReadKey-2.38-9.amzn2023.0.3.x86_64          54/73
+
+[  123.671018] cloud-init[1887]:   Verifying        : perl-Text-ParseWords-3.30-458.amzn2023.0.2.noarch    55/73
+
+[  123.671440] cloud-init[1887]:   Verifying        : perl-Text-Tabs+Wrap-2021.0726-1.amzn2023.0.1.noarc   56/73
+
+[  123.671874] cloud-init[1887]:   Verifying        : perl-Time-HiRes-4:1.9764-460.amzn2023.0.3.x86_64     57/73
+
+[  123.672273] cloud-init[1887]:   Verifying        : perl-Time-Local-2:1.300-5.amzn2023.0.2.noarch        58/73
+
+[  123.672704] cloud-init[1887]:   Verifying        : perl-URI-5.18-1.amzn2023.0.1.noarch                  59/73
+
+[  123.673126] cloud-init[1887]:   Verifying        : perl-base-2.27-477.amzn2023.0.9.noarch               60/73
+
+[  123.673546] cloud-init[1887]:   Verifying        : perl-constant-1.33-459.amzn2023.0.2.noarch           61/73
+
+[  123.673972] cloud-init[1887]:   Verifying        : perl-if-0.60.800-477.amzn2023.0.9.noarch             62/73
+
+[  123.674389] cloud-init[1887]:   Verifying        : perl-interpreter-4:5.32.1-477.amzn2023.0.9.x86_64    63/73
+
+[  123.674658] cloud-init[1887]:   Verifying        : perl-lib-0.65-477.amzn2023.0.9.x86_64                64/73
+
+[  123.674818] cloud-init[1887]:   Verifying        : perl-libnet-3.13-2.amzn2023.0.2.noarch               65/73
+
+[  123.675231] cloud-init[1887]:   Verifying        : perl-libs-4:5.32.1-477.amzn2023.0.9.x86_64           66/73
+
+[  123.675659] cloud-init[1887]:   Verifying        : perl-mro-1.23-477.amzn2023.0.9.x86_64                67/73
+
+[  123.676074] cloud-init[1887]:   Verifying        : perl-overload-1.31-477.amzn2023.0.9.noarch           68/73
+
+[  123.676516] cloud-init[1887]:   Verifying        : perl-overloading-0.02-477.amzn2023.0.9.noarch        69/73
+
+[  123.676932] cloud-init[1887]:   Verifying        : perl-parent-1:0.238-458.amzn2023.0.2.noarch          70/73
+
+[  123.677358] cloud-init[1887]:   Verifying        : perl-podlators-1:4.14-458.amzn2023.0.2.noarch        71/73
+
+[  123.677807] cloud-init[1887]:   Verifying        : perl-subs-1.03-477.amzn2023.0.9.noarch               72/73
+
+[  124.144725] cloud-init[1887]:   Verifying        : perl-vars-1.05-477.amzn2023.0.9.noarch               73/73
+
+[  124.144861] cloud-init[1887]: Installed:
+
+[  124.145079] cloud-init[1887]:   generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch
+
+[  124.145297] cloud-init[1887]:   git-2.50.1-1.amzn2023.0.1.x86_64
+
+[  124.145502] cloud-init[1887]:   git-core-2.50.1-1.amzn2023.0.1.x86_64
+
+[  124.145728] cloud-init[1887]:   git-core-doc-2.50.1-1.amzn2023.0.1.noarch
+
+[  124.145939] cloud-init[1887]:   gperftools-libs-2.9.1-1.amzn2023.0.3.x86_64
+
+[  124.146148] cloud-init[1887]:   libunwind-1.4.0-5.amzn2023.0.3.x86_64
+
+[  124.146361] cloud-init[1887]:   nginx-1:1.30.3-1.amzn2023.0.1.x86_64
+
+[  124.146571] cloud-init[1887]:   nginx-core-1:1.30.3-1.amzn2023.0.1.x86_64
+
+[  124.146789] cloud-init[1887]:   nginx-filesystem-1:1.30.3-1.amzn2023.0.1.noarch
+
+[  124.147003] cloud-init[1887]:   nginx-mimetypes-2.1.49-3.amzn2023.0.3.noarch
+
+[  124.147220] cloud-init[1887]:   perl-AutoLoader-5.74-477.amzn2023.0.9.noarch
+
+[  124.147432] cloud-init[1887]:   perl-B-1.80-477.amzn2023.0.9.x86_64
+
+[  124.147648] cloud-init[1887]:   perl-Carp-1.50-458.amzn2023.0.2.noarch
+
+[  124.147865] cloud-init[1887]:   perl-Class-Struct-0.66-477.amzn2023.0.9.noarch
+
+[  124.148074] cloud-init[1887]:   perl-Data-Dumper-2.191-522.amzn2023.0.3.x86_64
+
+[  124.148283] cloud-init[1887]:   perl-Digest-1.20-1.amzn2023.0.2.noarch
+
+[  124.148524] cloud-init[1887]:   perl-Digest-MD5-2.59-521.amzn2023.0.2.x86_64
+
+[  124.148730] cloud-init[1887]:   perl-DynaLoader-1.47-477.amzn2023.0.9.x86_64
+
+[  124.148937] cloud-init[1887]:   perl-Encode-4:3.21-520.amzn2023.0.2.x86_64
+
+[  124.149150] cloud-init[1887]:   perl-Errno-1.30-477.amzn2023.0.9.x86_64
+
+[  124.149359] cloud-init[1887]:   perl-Error-1:0.17030-2.amzn2023.0.1.noarch
+
+[  124.149570] cloud-init[1887]:   perl-Exporter-5.79-520.amzn2023.0.1.noarch
+
+[  124.149787] cloud-init[1887]:   perl-Fcntl-1.13-477.amzn2023.0.9.x86_64
+
+[  124.150713] cloud-init[1887]:   perl-File-Basename-2.85-477.amzn2023.0.9.noarch
+
+[  124.150883] cloud-init[1887]:   perl-File-Find-1.37-477.amzn2023.0.9.noarch
+
+[  124.153029] cloud-init[1887]:   perl-File-Path-2.18-2.amzn2023.0.2.noarch
+
+[  124.153214] cloud-init[1887]:   perl-File-Temp-1:0.231.200-2.amzn2023.0.1.noarch
+
+[  124.153422] cloud-init[1887]:   perl-File-stat-1.09-477.amzn2023.0.9.noarch
+
+[  124.155425] cloud-init[1887]:   perl-FileHandle-2.03-477.amzn2023.0.9.noarch
+
+[  124.155545] cloud-init[1887]:   perl-Getopt-Long-1:2.58-521.amzn2023.0.1.noarch
+
+[  124.155759] cloud-init[1887]:   perl-Getopt-Std-1.12-477.amzn2023.0.9.noarch
+
+[  124.157472] cloud-init[1887]:   perl-Git-2.50.1-1.amzn2023.0.1.noarch
+
+[  124.157659] cloud-init[1887]:   perl-HTTP-Tiny-0.092-2.amzn2023.0.2.noarch
+
+[  124.157864] cloud-init[1887]:   perl-IO-1.43-477.amzn2023.0.9.x86_64
+
+[  124.158076] cloud-init[1887]:   perl-IO-Socket-IP-0.43-522.amzn2023.0.1.noarch
+
+[  124.158283] cloud-init[1887]:   perl-IO-Socket-SSL-2.075-1.amzn2023.0.3.noarch
+
+[  124.158493] cloud-init[1887]:   perl-IPC-Open3-1.21-477.amzn2023.0.9.noarch
+
+[  124.158703] cloud-init[1887]:   perl-MIME-Base64-3.16-2.amzn2023.0.3.x86_64
+
+[  124.158911] cloud-init[1887]:   perl-NDBM_File-1.15-477.amzn2023.0.9.x86_64
+
+[  124.159120] cloud-init[1887]:   perl-Net-SSLeay-1.94-3.amzn2023.0.3.x86_64
+
+[  124.159327] cloud-init[1887]:   perl-POSIX-1.94-477.amzn2023.0.9.x86_64
+
+[  124.159543] cloud-init[1887]:   perl-PathTools-3.78-459.amzn2023.0.3.x86_64
+
+[  124.159747] cloud-init[1887]:   perl-Pod-Escapes-1:1.07-458.amzn2023.0.2.noarch
+
+[  124.159962] cloud-init[1887]:   perl-Pod-Perldoc-3.28.01-459.amzn2023.0.3.noarch
+
+[  124.160395] cloud-init[1887]:   perl-Pod-Simple-1:3.42-2.amzn2023.0.2.noarch
+
+[  124.160603] cloud-init[1887]:   perl-Pod-Usage-4:2.01-2.amzn2023.0.2.noarch
+
+[  124.162752] cloud-init[1887]:   perl-Scalar-List-Utils-4:1.56-459.amzn2023.0.3.x86_64
+
+[  124.164016] cloud-init[1887]:   perl-SelectSaver-1.02-477.amzn2023.0.9.noarch
+
+[  124.164221] cloud-init[1887]:   perl-Socket-4:2.032-1.amzn2023.0.3.x86_64
+
+[  124.164471] cloud-init[1887]:   perl-Storable-1:3.37-522.amzn2023.0.2.x86_64
+
+[  124.164651] cloud-init[1887]:   perl-Symbol-1.08-477.amzn2023.0.9.noarch
+
+[  124.164857] cloud-init[1887]:   perl-Term-ANSIColor-5.01-459.amzn2023.0.2.noarch
+
+[  124.165072] cloud-init[1887]:   perl-Term-Cap-1.17-458.amzn2023.0.2.noarch
+
+[  124.165287] cloud-init[1887]:   perl-TermReadKey-2.38-9.amzn2023.0.3.x86_64
+
+[  124.165498] cloud-init[1887]:   perl-Text-ParseWords-3.30-458.amzn2023.0.2.noarch
+
+[  124.165714] cloud-init[1887]:   perl-Text-Tabs+Wrap-2021.0726-1.amzn2023.0.1.noarch
+
+[  124.165925] cloud-init[1887]:   perl-Time-HiRes-4:1.9764-460.amzn2023.0.3.x86_64
+
+[  124.166133] cloud-init[1887]:   perl-Time-Local-2:1.300-5.amzn2023.0.2.noarch
+
+[  124.166345] cloud-init[1887]:   perl-URI-5.18-1.amzn2023.0.1.noarch
+
+[  124.166552] cloud-init[1887]:   perl-base-2.27-477.amzn2023.0.9.noarch
+
+[  124.166765] cloud-init[1887]:   perl-constant-1.33-459.amzn2023.0.2.noarch
+
+[  124.166970] cloud-init[1887]:   perl-if-0.60.800-477.amzn2023.0.9.noarch
+
+[  124.167178] cloud-init[1887]:   perl-interpreter-4:5.32.1-477.amzn2023.0.9.x86_64
+
+[  124.167396] cloud-init[1887]:   perl-lib-0.65-477.amzn2023.0.9.x86_64
+
+[  124.167605] cloud-init[1887]:   perl-libnet-3.13-2.amzn2023.0.2.noarch
+
+[  124.167815] cloud-init[1887]:   perl-libs-4:5.32.1-477.amzn2023.0.9.x86_64
+
+[  124.168029] cloud-init[1887]:   perl-mro-1.23-477.amzn2023.0.9.x86_64
+
+[  124.168237] cloud-init[1887]:   perl-overload-1.31-477.amzn2023.0.9.noarch
+
+[  124.168441] cloud-init[1887]:   perl-overloading-0.02-477.amzn2023.0.9.noarch
+
+[  124.168655] cloud-init[1887]:   perl-parent-1:0.238-458.amzn2023.0.2.noarch
+
+[  124.168861] cloud-init[1887]:   perl-podlators-1:4.14-458.amzn2023.0.2.noarch
+
+[  124.169073] cloud-init[1887]:   perl-subs-1.03-477.amzn2023.0.9.noarch
+
+[  124.169277] cloud-init[1887]:   perl-vars-1.05-477.amzn2023.0.9.noarch
+
+[  124.221592] cloud-init[1887]: Complete!
+
+[  125.706661] cloud-init[1887]: dotnet-install: Attempting to download using aka.ms link https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.18/aspnetcore-runtime-9.0.18-linux-x64.tar.gz
+
+[  126.213565] cloud-init[1887]: dotnet-install: Remote file https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.18/aspnetcore-runtime-9.0.18-linux-x64.tar.gz size is 44469022 bytes.
+
+[  126.216718] cloud-init[1887]: dotnet-install: Extracting archive from https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.18/aspnetcore-runtime-9.0.18-linux-x64.tar.gz
+
+[  127.500523] cloud-init[1887]: dotnet-install: Downloaded file size is 44469022 bytes.
+
+[  127.501931] cloud-init[1887]: dotnet-install: The remote and local file sizes are equal.
+
+[  127.527392] cloud-init[1887]: dotnet-install: Installed version is 9.0.18
+
+[  127.536756] cloud-init[1887]: dotnet-install: Adding to current process PATH: `/usr/share/dotnet`. Note: This change will be visible only when sourcing script.
+
+[  127.539963] cloud-init[1887]: dotnet-install: Note that the script does not resolve dependencies during installation.
+
+[  127.540729] cloud-init[1887]: dotnet-install: To check the list of dependencies, go to https://learn.microsoft.com/dotnet/core/install, select your operating system and check the "Dependencies" section.
+
+[  127.541151] cloud-init[1887]: dotnet-install: Installation finished successfully.
+
+[  127.556531] cloud-init[1887]: Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service ΓåÆ /usr/lib/systemd/system/nginx.service.
+
+[  127.676665] zram_generator::config[9688]: zram0: system has too much memory (912MB), limit is 800MB, ignoring.
+
+ci-info: no authorized SSH keys fingerprints found for user ec2-user.
+
+<14>Jul 23 10:32:42 cloud-init: #############################################################
+
+<14>Jul 23 10:32:42 cloud-init: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+
+<14>Jul 23 10:32:43 cloud-init: 256 SHA256:lDuE38/WJv6hSXZONbmWqkAxnMgD5oJBmMxDiTpcswQ root@ip-10-0-2-182.ap-south-1.compute.internal (ECDSA)
+
+<14>Jul 23 10:32:43 cloud-init: 256 SHA256:HwHbMGGjS0KGnGSB3COsgfnZ+p1bhPlqwh0QJjImEcU root@ip-10-0-2-182.ap-south-1.compute.internal (ED25519)
+
+<14>Jul 23 10:32:43 cloud-init: -----END SSH HOST KEY FINGERPRINTS-----
+
+<14>Jul 23 10:32:43 cloud-init: #############################################################
+
+-----BEGIN SSH HOST KEY KEYS-----
+
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBVq8WspANfFfiVdPLKMCkqxJ/zr597SqJfK9WO+cx9qaJDcqOb/6YsvbRcpGQJMkXVX2JmPgb/wxosGjSv2Jjg= root@ip-10-0-2-182.ap-south-1.compute.internal
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPINshYQ2ALh0chRaFzWWFrb+6sU47FKrJsM7SKn2F0M root@ip-10-0-2-182.ap-south-1.compute.internal
+
+-----END SSH HOST KEY KEYS-----
+
+[  128.061406] cloud-init[1887]: Cloud-init v. 22.2.2 finished at Thu, 23 Jul 2026 10:32:43 +0000. Datasource DataSourceEc2.  Up 128.05 seconds
+
+[ 3478.059767] kauditd_printk_skb: 125 callbacks suppressed
+
+[ 3478.059771] audit: type=1305 audit(1784806113.079:368): op=set audit_pid=0 old=1562 auid=4294967295 ses=4294967295 subj=system_u:system_r:auditd_t:s0 res=1
+
+[ 3478.063004] audit: type=1131 audit(1784806113.079:369): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=auditd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[ 3478.065735] audit: type=1131 audit(1784806113.079:370): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[ 3478.085117] audit: type=1131 audit(1784806113.099:371): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[ 3478.088067] audit: type=1131 audit(1784806113.099:372): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-fsck-root comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[ 3478.090970] audit: type=1131 audit(1784806113.099:373): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[ 3478.094047] audit: type=1130 audit(1784806113.099:374): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-poweroff comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[ 3478.097038] audit: type=1131 audit(1784806113.099:375): pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=systemd-poweroff comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[ 3478.099993] audit: type=1334 audit(1784806113.099:376): prog-id=78 op=UNLOAD
+
+[ 3478.100909] audit: type=1334 audit(1784806113.099:377): prog-id=77 op=UNLOAD
+
+[ 3478.314393] systemd-shutdown[1]: Syncing filesystems and block devices.
+
+[ 3478.318378] systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+
+[ 3478.321479] systemd-journald[1103]: Received SIGTERM from PID 1 (systemd-shutdow).
+
+[ 3478.358859] systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+
+[ 3478.361266] systemd-shutdown[1]: Unmounting file systems.
+
+[ 3478.362445] (sd-remount)[13796]: Remounting '/' read-only with options 'seclabel,inode64,logbufs=8,logbsize=32k,sunit=1024,swidth=1024,noquota'.
+
+[ 3478.373051] systemd-shutdown[1]: All filesystems unmounted.
+
+[ 3478.373696] systemd-shutdown[1]: Deactivating swaps.
+
+[ 3478.374408] systemd-shutdown[1]: All swaps deactivated.
+
+[ 3478.375063] systemd-shutdown[1]: Detaching loop devices.
+
+[ 3478.376228] systemd-shutdown[1]: All loop devices detached.
+
+[ 3478.376853] systemd-shutdown[1]: Stopping MD devices.
+
+[ 3478.377591] systemd-shutdown[1]: All MD devices stopped.
+
+[ 3478.378243] systemd-shutdown[1]: Detaching DM devices.
+
+[ 3478.378970] systemd-shutdown[1]: All DM devices detached.
+
+[ 3478.379668] systemd-shutdown[1]: All filesystems, swaps, loop devices, MD devices and DM devices detached.
+
+[ 3478.381866] systemd-shutdown[1]: Syncing filesystems and block devices.
+
+[ 3478.382660] systemd-shutdown[1]: Powering off.
+
+[ 3478.508103] ACPI: PM: Preparing to enter system sleep state S5
+
+[ 3478.508852] reboot: Power down
+
+[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[0m[35m[40m[2J[01;01H[=3h[2J[01;01H[0m[37m[40m  Booting `Amazon Linux (6.18.38-73.137.amzn2023.x86_64) 2023'
+
+
+
+[    3.190442] systemd-journald[1102]: Received client request to flush runtime journal.
+
+[    3.501536] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+
+[    3.509754] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+
+[    3.510954] i8042: Warning: Keylock active
+
+[    3.513554] serio: i8042 KBD port at 0x60,0x64 irq 1
+
+[    3.514127] serio: i8042 AUX port at 0x60,0x64 irq 12
+
+[    3.538595] ena 0000:00:05.0: Elastic Network Adapter (ENA) v2.17.2g
+
+[    3.544031] ACPI: button: Power Button [PWRF]
+
+[    3.544636] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+
+[    3.545849] ACPI: button: Sleep Button [SLPF]
+
+[    3.557840] ena 0000:00:05.0: ENA device version: 0.10
+
+[    3.558444] ena 0000:00:05.0: ENA controller version: 0.0.1 implementation version 1
+
+[    3.640786] ena 0000:00:05.0: LLQ is not supported Fallback to host mode policy.
+
+[    3.654421] ena 0000:00:05.0: Elastic Network Adapter (ENA) found at mem 80400000, mac addr 02:28:9e:e7:d2:5f
+
+[    3.672761] nvme nvme0: using unchecked data buffer
+
+[    3.674889] ena 0000:00:05.0 ens5: renamed from eth0
+
+[    3.849364] zram_generator::config[1659]: zram0: system has too much memory (912MB), limit is 800MB, ignoring.
+
+[    4.049210] rm[1673]: removed '/var/lib/cloud/instance/boot-finished'
+
+[    4.050655] rm[1673]: removed '/var/lib/cloud/instance'
+
+[    4.995556] cloud-init[1795]: Cloud-init v. 22.2.2 running 'init' at Thu, 23 Jul 2026 11:28:40 +0000. Up 4.96 seconds.
+
+[    5.019310] cloud-init[1795]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++
+
+[    5.021501] cloud-init[1795]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+
+[    5.023605] cloud-init[1795]: ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
+
+[    5.025600] cloud-init[1795]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+
+[    5.027596] cloud-init[1795]: ci-info: |  ens5  | True |         10.0.2.182         | 255.255.255.0 | global | 02:28:9e:e7:d2:5f |
+
+[    5.029726] cloud-init[1795]: ci-info: |  ens5  | True | fe80::28:9eff:fee7:d25f/64 |       .       |  link  | 02:28:9e:e7:d2:5f |
+
+[    5.031739] cloud-init[1795]: ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
+
+[    5.033675] cloud-init[1795]: ci-info: |   lo   | True |          ::1/128           |       .       |  host  |         .         |
+
+[    5.035746] cloud-init[1795]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+
+[    5.038478] cloud-init[1795]: ci-info: ++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++
+
+[    5.040609] cloud-init[1795]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+
+[    5.042353] cloud-init[1795]: ci-info: | Route | Destination | Gateway  |     Genmask     | Interface | Flags |
+
+[    5.043976] cloud-init[1795]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+
+[    5.045723] cloud-init[1795]: ci-info: |   0   |   0.0.0.0   | 10.0.2.1 |     0.0.0.0     |    ens5   |   UG  |
+
+[    5.047359] cloud-init[1795]: ci-info: |   1   |   10.0.0.2  | 10.0.2.1 | 255.255.255.255 |    ens5   |  UGH  |
+
+[    5.048992] cloud-init[1795]: ci-info: |   2   |   10.0.2.0  | 0.0.0.0  |  255.255.255.0  |    ens5   |   U   |
+
+[    5.050628] cloud-init[1795]: ci-info: |   3   |   10.0.2.1  | 0.0.0.0  | 255.255.255.255 |    ens5   |   UH  |
+
+[    5.052267] cloud-init[1795]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+
+[    5.053927] cloud-init[1795]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+
+[    5.055296] cloud-init[1795]: ci-info: +-------+-------------+---------+-----------+-------+
+
+[    5.056696] cloud-init[1795]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+
+[    5.058077] cloud-init[1795]: ci-info: +-------+-------------+---------+-----------+-------+
+
+[    5.059444] cloud-init[1795]: ci-info: |   0   |  fe80::/64  |    ::   |    ens5   |   U   |
+
+[    5.060818] cloud-init[1795]: ci-info: |   2   |    local    |    ::   |    ens5   |   U   |
+
+[    5.062230] cloud-init[1795]: ci-info: |   3   |  multicast  |    ::   |    ens5   |   U   |
+
+[    5.063635] cloud-init[1795]: ci-info: +-------+-------------+---------+-----------+-------+
+
+[    5.971051] cloud-init[1865]: Cloud-init v. 22.2.2 running 'modules:config' at Thu, 23 Jul 2026 11:28:41 +0000. Up 5.91 seconds.
+
+[    6.336232] cloud-init[1869]: Cloud-init v. 22.2.2 running 'modules:final' at Thu, 23 Jul 2026 11:28:41 +0000. Up 6.28 seconds.
+
+[    6.391928] cloud-init[1869]: Cloud-init v. 22.2.2 finished at Thu, 23 Jul 2026 11:28:41 +0000. Datasource DataSourceEc2.  Up 6.38 seconds
+
+
+
+
+Amazon Linux 2023.12.20260720
+
+Kernel 6.18.38-73.137.amzn2023.x86_64 on an x86_64 (-)
+
+
+
+	2026-07-23T11:37:41+00:00
